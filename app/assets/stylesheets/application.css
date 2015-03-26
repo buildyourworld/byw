@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+#header {
+	width:100px;
+	height: 700px;
+}
