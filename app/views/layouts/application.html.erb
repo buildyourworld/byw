@@ -2,6 +2,12 @@
 <html>
 <head >
   <title>Byw</title>
+
+  <!-- font1: title -->
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <!-- font2 -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -17,9 +23,14 @@
 	</header>
 	
 	<main id="home_main">
-		
+		<div id="home_loop">
+			<p id="webtitle">Build your world</p>
+		</div>
 	</main>
 
+	<footer id="footer">
+
+	</footer>
 <%= yield %>
 
 </body>

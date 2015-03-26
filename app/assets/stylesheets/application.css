@@ -18,13 +18,19 @@
 	width:100px;
 	height: 450px;
 	position: fixed;
-	background-color: whitesmoke;
+	background-color: #460ADE;
 }
 
 #home_main {
 	height: 450px;
+	background-color: #D4020D;
 }
 
-#projectsloop {
-	margin-left: 150px;
+#webtitle {
+	font-family: Lobster;
+	text-align: center;
+	color: #51E0A4;
+}
+
+#home_loop {
 }
