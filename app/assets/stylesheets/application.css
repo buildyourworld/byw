@@ -20,3 +20,7 @@
 	position: fixed;
 	background-color: #460ADE;
 }
+
+#main {
+	margin-left: 100px;
+}
