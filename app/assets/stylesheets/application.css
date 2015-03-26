@@ -16,15 +16,15 @@
 
 #home_header {
 	width:100px;
-	height: 700px;
+	height: 450px;
 	position: fixed;
 	background-color: whitesmoke;
 }
 
 #home_main {
-	height: 700px;
+	height: 450px;
 }
 
 #projectsloop {
-	margin-left: 100px;
+	margin-left: 150px;
 }
