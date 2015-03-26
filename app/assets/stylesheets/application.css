@@ -14,7 +14,15 @@
  *= require_self
  */
 
-#header {
+#home_header {
 	width:100px;
 	height: 700px;
+	position: fixed;
+}
+
+#home_main {
+	height: 700px;
+}
+
+#home_footer {
 }

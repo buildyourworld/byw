@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head >
   <title>Byw</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+	<header  id="home_header">
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <%= link_to "BYW", root_path%>
 <%= link_to "Sign up", new_user_registration_path%>
 <%= link_to "Log in", new_user_session_path%>
+	</header>
+	
+	<main id="home_main">
+	
+	</main>
+	
+	<footer id="home_footer">
+	
+	</footer>
+
 <%= yield %>
 
 </body>
