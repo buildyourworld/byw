@@ -20,17 +20,3 @@
 	position: fixed;
 	background-color: #460ADE;
 }
-
-#home_main {
-	height: 450px;
-	background-color: #951900;
-}
-
-#webtitle {
-	font-family: Lobster;
-	text-align: center;
-	color: #889d93;
-}
-
-#home_loop {
-}
