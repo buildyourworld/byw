@@ -18,11 +18,6 @@
 	width:100px;
 	height: 700px;
 	position: fixed;
+	background-color: whitesmoke;
 }
 
-#home_main {
-	height: 700px;
-}
-
-#home_footer {
-}
