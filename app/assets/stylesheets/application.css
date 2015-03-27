@@ -15,8 +15,8 @@
  */
 
 #home_header {
-	/*width:100px;
-	height: 450px;*/
+	width:100px;
+	height: 600px;
 	position: fixed;
 	background-color: #460ADE;
 }
@@ -26,15 +26,49 @@
 }
 
 a {
-	color: white;
+	color: black;
+	display: block;
+	margin-top: 60px;
+	margin-bottom: 30px;
+	text-align: center;
+	font-family: Avenir;
+	text-decoration: none;
 }
 
 #screen {
-	background-color: whitesmoke;
+	background-color: red;
 	height: 600px;
 	text-align: center;
 }
 
 #namesite {
 	font-family: Lobster;
+	line-height: 300px;
+}
+
+th {
+	font-family: Avenir;
+	font-weight: normal;
+}
+
+h1 {
+	font-family: Avenir;
+	font-weight: normal;
+	margin-left: 150px;
+}
+
+h2 {
+	font-family: Avenir;
+	font-weight: normal;
+	margin-left: 150px;	
+}
+
+h3 {
+	font-family: Avenir;
+	font-weight: normal;
+	margin-left: 150px;
+}
+
+form#new_user.new_user {
+	margin-left: 150px;
 }

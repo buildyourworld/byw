@@ -16,14 +16,15 @@
 <body>
 <header  id="home_header">
   <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
   <%= link_to "BYW", root_path%>
   <%= link_to "Sign up", new_user_registration_path%>
   <%= link_to "Log in", new_user_session_path%>
 </header>
-<screen id="screen">
-  <p id="namesite">Build your wolrd</p>
-</screen>
+<div id="screen">
+  <p id="namesite">Build your world</p>
+    <p class="alert"><%= alert %></p>
+
+</div>
 
 <%= yield %>
 
