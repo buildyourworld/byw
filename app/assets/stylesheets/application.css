@@ -28,3 +28,11 @@
 a {
 	color: white;
 }
+
+#screen {
+	background-color: whitesmoke;
+}
+
+#namesite {
+	font-family: Lobster;
+}
