@@ -16,8 +16,8 @@
 
 #home_header {
 	/*width:100px;
-	height: 450px;
-	position: fixed;*/
+	height: 450px;*/
+	position: fixed;
 	background-color: #460ADE;
 }
 
@@ -31,6 +31,8 @@ a {
 
 #screen {
 	background-color: whitesmoke;
+	height: 600px;
+	text-align: center;
 }
 
 #namesite {
