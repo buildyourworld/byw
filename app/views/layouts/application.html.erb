@@ -14,13 +14,14 @@
 </head>
 
 <body>
-	<header  id="home_header">
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<%= link_to "BYW", root_path%>
-<%= link_to "Sign up", new_user_registration_path%>
-<%= link_to "Log in", new_user_session_path%>
-	</header>
+<header  id="home_header">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <%= link_to "BYW", root_path%>
+  <%= link_to "Sign up", new_user_registration_path%>
+  <%= link_to "Log in", new_user_session_path%>
+</header>
+
 <%= yield %>
 
 </body>

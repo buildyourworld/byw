@@ -15,12 +15,16 @@
  */
 
 #home_header {
-	width:100px;
+	/*width:100px;
 	height: 450px;
-	position: fixed;
+	position: fixed;*/
 	background-color: #460ADE;
 }
 
 #main {
 	margin-left: 100px;
+}
+
+a {
+	color: white;
 }
