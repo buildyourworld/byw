@@ -16,17 +16,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 #home_header {
 	height: 600px;
-/*	position: fixed;*/
-	background-color: #460ADE;
+	position: fixed;
+	background-color: blue;
 }
 
-/*#main {
-	margin-left: 100px;
-}*/
 
-a {
+#home_header a {
 	color: black;
 	display: block;
 	margin-top: 60px;
@@ -34,6 +32,9 @@ a {
 	text-align: center;
 	font-family: Avenir;
 	text-decoration: none;
+}
+#home {
+	padding-left: 100px;
 }
 
 #screen {
@@ -53,6 +54,35 @@ a {
 	font-family: Lobster;
 	font-size: 1.1em;
 }
+
+/*#main {
+	margin-left: 100px;
+}*/
+
+
+#listing a {
+	color: black;
+	display: block;
+	margin-top: 60px;
+	margin-bottom: 30px;
+	text-align: center;
+	font-family: Avenir;
+	text-decoration: none;
+}
+
+#footer {
+	margin-top: 100px;
+ 	border-top: solid blue 1px;
+    text-align: center;
+}
+
+#footer a {
+	color: black;
+	text-align: center;
+	font-family: Avenir;
+	text-decoration: none;
+}
+
 
 th {
 	font-family: Avenir;
@@ -98,5 +128,5 @@ form#new_project.new_project {
 }
 
 .border {
-	border: solid black;
+	border: solid blue 1px;
 }
