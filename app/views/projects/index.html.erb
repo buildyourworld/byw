@@ -1,39 +1,22 @@
-<main id="main">
+<div class="container-fluid" id="main">
 
-<div id="screen">
-  <p id="namesite">Build your world</p>
-  <p id="pitchline">"La tâche de gouverner la terre va nous échoir. De là cette question : comment voulons-nous modeler l'avenir de l'humanité ?"</p>
-</div>
+  <div class="row" id="screen">
+    <p id="namesite">Build your world</p>
+    <p id="pitchline">"La tâche de gouverner la terre va nous échoir. De là cette question : comment voulons-nous modeler l'avenir de l'humanité ?"</p>
+  </div>
 
-<p class="alert"><%= alert %></p>
-<p id="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <p id="notice"><%= notice %></p>
 
-<h1>Listing Projects</h1>
-
-<table>
-  <thead>
-    <div>
-      <th>Name</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </div>
-  </thead>
-
-  <tbody>
+  <div class="row">
     <% @projects.each do |project| %>
-      <div>
-        <td><%= project.name %></td>
-        <td><%= project.description %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </div>
+          <div class="col-sm-4 pad-bot">
+            <div class="border">
+              <div class="row"><%= link_to project.name, project_path(project) %></div>
+              <div class="row center"><%= project.description %></div>
+            </div>
+          </div>            
     <% end %>
-  </tbody>
-</table>
+  </div>
 
-<br>
-
-<%= link_to 'New Project', new_project_path %>
-
-</main>
+</div>

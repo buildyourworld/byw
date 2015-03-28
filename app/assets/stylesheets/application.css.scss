@@ -17,15 +17,14 @@
 @import "bootstrap";
 
 #home_header {
-	width:100px;
 	height: 600px;
-	position: fixed;
+/*	position: fixed;*/
 	background-color: #460ADE;
 }
 
-#main {
+/*#main {
 	margin-left: 100px;
-}
+}*/
 
 a {
 	color: black;
@@ -82,6 +81,22 @@ form#new_user.new_user {
 	margin-left: 150px;
 }
 
+form#new_project.new_project {
+	margin-left: 150px;
+}
+
 .padding-top {
 	padding-top: 50px;
+}
+
+.pad-bot {
+	padding-bottom: 2%;
+}
+
+.center {
+	text-align: center;
+}
+
+.border {
+	border: solid black;
 }
