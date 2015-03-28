@@ -14,19 +14,26 @@
 </head>
 
 <body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4">
+        
+      </div>
+      <div class="col-xs-8">
+        
+      </div>    
+    </div>
+  </div>
+</nav>
+
 <header  id="home_header">
   <p class="notice"><%= notice %></p>
   <%= link_to "BYW", root_path%>
   <%= link_to "Sign up", new_user_registration_path%>
   <%= link_to "Log in", new_user_session_path%>
 </header>
-<div id="screen">
-  <p id="namesite">Build your world</p>
-  <p id="pitchline">"La tâche de gouverner la terre va nous échoir. De là cette question : comment voulons-nous modeler l'avenir de l'humanité ?"</p>
-  <p class="alert"><%= alert %></p>
-
-
-</div>
 
 <%= yield %>
 
