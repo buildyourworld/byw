@@ -17,6 +17,7 @@
 @import "bootstrap";
 
 
+	/*carousel*/
 
 .item{
     text-align: center;
@@ -27,14 +28,27 @@
 	margin: 20px;
 }
 
+#carousel1 {
+	color: white;
+}
+
+#carousel2 {
+	color: white;
+}
+
+#carousel3 {
+	color: white;
+}
+
+	/*home*/
+
 #home_header {
 	height: 600px;
 	background-color: blue;
 }
 
-
 #home_header a {
-	color: black;
+	color: white;
 	display: block;
 	margin-top: 60px;
 	margin-bottom: 30px;
@@ -68,25 +82,13 @@
 	margin-left: 100px;
 }*/
 
+	/*listing*/
 
 #listing a {
 	color: black;
 	display: block;
 	margin-top: 60px;
 	margin-bottom: 30px;
-	text-align: center;
-	font-family: Avenir;
-	text-decoration: none;
-}
-
-#footer {
-	margin-top: 100px;
- 	border-top: solid blue 1px;
-    text-align: center;
-}
-
-#footer a {
-	color: black;
 	text-align: center;
 	font-family: Avenir;
 	text-decoration: none;
@@ -137,4 +139,26 @@ form#new_project.new_project {
 
 .border {
 	border: solid blue 1px;
+}
+
+
+/*footer*/
+
+#footer {
+	margin-top: 100px;
+ 	border-top: solid blue 1px;
+    text-align: center;
+}
+
+#footer a {
+	color: black;
+	text-align: center;
+	font-family: Avenir;
+	text-decoration: none;
+}
+
+/*show project*/
+
+#show_project_title {
+	text-align: center;
 }
