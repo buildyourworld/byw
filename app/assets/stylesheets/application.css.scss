@@ -133,6 +133,10 @@ form#new_project.new_project {
 	padding-bottom: 2%;
 }
 
+.pad-top {
+	padding-top:5%;
+}
+
 .center {
 	text-align: center;
 }
@@ -145,9 +149,12 @@ form#new_project.new_project {
 /*footer*/
 
 #footer {
-	margin-top: 100px;
  	border-top: solid blue 1px;
     text-align: center;
+    /*position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px;*/
 }
 
 #footer a {

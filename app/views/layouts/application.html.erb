@@ -16,7 +16,9 @@
 <body>
 
 <div class="container-fluid">
+  
   <div class="row">
+    
     <div class="col-xs-2 col-sm-1 navbar navbar-default navbar-fixed-top" id="home_header">
       <p class="notice"><%= notice %></p>
       <%= link_to "BYW", root_path%>
@@ -27,18 +29,21 @@
         log out
       </div>
     </div>
+    
     <div class="col-xs-10 col-sm-11" id="home">
       <%= yield %>
     </div>
+  
   </div>
 
   <div class="row">
-    <footer id="footer">
+    <footer class="footer "id="footer">
       <a href="" class="btn">Contact us</a>
       <a href="" class="btn">Facebook</a>
       <a href="" class="btn">Twitter</a>
     </footer>
   </div>
+
 </div>
 
 

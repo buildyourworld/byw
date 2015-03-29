@@ -1,28 +1,38 @@
 <div class="container-fluid">
 	
 	<div class="row" id="show_project_title">
-		<%= @project.name %> </br>
+		<div class="border">
+			<%= @project.name %> </br>
+		</div>
 	</div>
 	
 	<div class="row">
 		
-		<div class="col-sm-6"> 	
-			<%= @project.description %>
-			<div style="color:red;">
-    			inside the description allow people to add one photo or one video
+		<div class="col-sm-6 pad-top"> 	
+			<div class="border">
+				<%= @project.description %>
+				<div style="color:red;">
+	    			inside the description allow people to add one photo or video
+				</div>
 			</div>
 		</div>
 		
-		<div class="col-sm-6">
+		<div class="col-sm-6 pad-top">
 			<div style="color:red;">
-    			field tools
-  			</div>
-  			<div style="color:red;">
-    			field skills
-  			</div>			
-		</div>
+		   	 	<div class="border">	
+	    			field skills
+	  			</div>
+	  		</div>	
 
-  	</div>
+	  			<div style="color:red;" class="pad-top">	
+	  				<div class="border">
+	    				field tools
+	  				</div>			
+	  			</div>
+		
+		</div>
+	
+	</div>
 
 </div>
 
