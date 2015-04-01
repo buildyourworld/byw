@@ -1,23 +1,29 @@
-<div class="container-fluid">
+<div class="container-fluid" id="show_project">
 	
-	<div class="row" id="show_project_title">
-		<div class="border">
-			<%= @project.name %> </br>
+	<div class="row">
+		<div class="row" id="show_project_title">
+			<div class="border">
+				<%= @project.name %> </br>
+			</div>
+		</div>
+
+		<div class="row">
+				<div><p id="pioneer">Pioneer</p></div>
 		</div>
 	</div>
 	
 	<div class="row">
 		
-		<div class="col-sm-6 pad-top"> 	
+		<div class="col-sm-8 pad-top"> 
 			<div class="border">
 				<%= @project.description %>
 				<div style="color:red;">
 	    			inside the description allow people to add one photo or video
 				</div>
 			</div>
-		</div>
-		
-		<div class="col-sm-6 pad-top">
+		</div>		
+
+		<div class="col-sm-4 pad-top">
 			<div style="color:red;">
 		   	 	<div class="border">	
 	    			field skills

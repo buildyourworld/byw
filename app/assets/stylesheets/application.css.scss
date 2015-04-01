@@ -17,6 +17,11 @@
 @import "bootstrap";
 
 
+.row {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
 	/*carousel*/
 
 .item{
@@ -76,6 +81,14 @@
 #pitchline {
 	font-family: Lobster;
 	font-size: 1.1em;
+}
+
+
+
+#short_description {
+height: 104px;
+word-break: break-word;
+overflow: hidden;	
 }
 
 /*#main {
@@ -166,6 +179,16 @@ form#new_project.new_project {
 
 /*show project*/
 
+#show_project {
+	margin-top: 50px;
+}
+
 #show_project_title {
 	text-align: center;
+	font-size: 30px;
+	font-weight: 500;
+}
+
+div.container-fluid {
+	font-family: Avenir;
 }
