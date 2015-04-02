@@ -20,12 +20,12 @@
             </div>
             <div class="item">
                 <div id="carousel2">
-                  <p>Aliquam sit amet gravida nibh, facilisis gravida odio.</p>
+                  <p>présentation de projets réussis, exemple à Lyon immeuble coopératif</p>
                 </div>
             </div>
             <div class="item">
                 <div id="carousel3">
-                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                  <p>contact people who succeed in their projects, avoir un carnet d'adresse</p>
                 </div>
             </div>
         </div>
@@ -42,6 +42,10 @@
   <p class="alert"><%= alert %></p>
   <p id="notice"><%= notice %></p>
 
+  <div class="row pad-bot" style="color:red">
+    barre de recherche dans les projets
+  </div>
+  
   <div class="row" id="listing">
     <div class="col-sm-10">
         <% @projects.each do |project| %>
@@ -57,16 +61,16 @@
         <% end %>
       </div>
       <div class="col-sm-2" id="categories_list" style="color:red">
-        <ul>
-          <li>architecture</li>
-          <li>business</li>
-          <li>charity</li>
-          <li>demonstration</li>
-          <li>environment</li>
-          <li>musique</li>
-          <li>sports</li>
-          <li>technology</li>
-        </ul>
+          <ul>
+            <li>architecture</li>
+            <li>business</li>
+            <li>charity</li>
+            <li>demonstration</li>
+            <li>environment</li>
+            <li>musique</li>
+            <li>sports</li>
+            <li>technology</li>
+          </ul>
       </div>
   </div>
 
