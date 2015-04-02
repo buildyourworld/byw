@@ -43,17 +43,31 @@
   <p id="notice"><%= notice %></p>
 
   <div class="row" id="listing">
-    <% @projects.each do |project| %>
-          <div class="col-sm-4 pad-bot">
-              <div class="thumbnail">
-                <img src="..." alt="...">
-                <div class="caption">
-                  <div class="row"><%= link_to project.name, project_path(project) %></div>
-                  <div class="row center" id="short_description"><%= project.description %></div>
-                </div>
-              </div>         
-          </div>            
-    <% end %>
+    <div class="col-sm-9">
+        <% @projects.each do |project| %>
+            <div class="col-sm-4 pad-bot">
+                <div class="thumbnail">
+                  <img src="..." alt="...">
+                  <div class="caption">
+                    <div class="row"><%= link_to project.name, project_path(project) %></div>
+                    <div class="row center" id="short_description"><%= project.description %></div>
+                  </div>
+                </div>         
+            </div>            
+        <% end %>
+      </div>
+      <div class="col-sm-3" style="color:red">categories
+        <ol>
+          <li>architecture</li>
+          <li>business</li>
+          <li>charity</li>
+          <li>demonstration</li>
+          <li>environment</li>
+          <li>musique</li>
+          <li>sports</li>
+          <li>technology</li>
+        </ol>
+      </div>
   </div>
 
 </div>
