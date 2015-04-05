@@ -15,6 +15,8 @@ class ProjectsController < ApplicationController
   # GET /projects/new
   def new
     @project = Project.new
+    @project.skills.build
+    @project.tools.build
   end
 
   # GET /projects/1/edit
@@ -69,6 +71,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name, :description)
+      params.require(:project).permit(:name, :description, skills_attributes: [:id, :name, :_destroy], tools_attributes: [:id, :name, :_destroy])
     end
 end

@@ -19,12 +19,25 @@
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
-  <div style="color:red;">
-    field skills
+
+  <div class="field">
+    <%= f.fields_for :skills do |skill|%>
+      <%= render 'skill_fields', :f => skill %>
+      <div class="btn btn-default">
+        <%= link_to_add_association 'add skill', f, :skills%>
+      </div>
+    <%end%>
   </div>
-  <div style="color:red;">
-    field tools
+
+  <div class="field">
+    <%= f.fields_for :tools do |tool|%>
+      <%= render 'tool_fields', :f => tool %>
+      <div class="btn btn-default">
+        <%= link_to_add_association 'add tool', f, :tools%>
+      </div>
+    <%end%>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
