@@ -42,9 +42,12 @@
   <p class="alert"><%= alert %></p>
   <p id="notice"><%= notice %></p>
 
-  <div class="row pad-bot" style="color:red">
-    barre de recherche dans les projets
-  </div>
+  <%= form_tag search_projects_path, method: :get, class: "row center pad-bot", role: "search" do %>
+    <%= text_field_tag :search, params[:search], class: "block form-control" %>
+    <button>
+      search
+    </button>
+  <% end %>
   
   <div class="row" id="listing">
     <div class="col-sm-10">

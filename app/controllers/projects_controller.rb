@@ -6,7 +6,10 @@ class ProjectsController < ApplicationController
   def index
     @projects = Project.all
   end
-  
+  def search
+    @projects = Project.where(name: params[:search])
+    render action: :index
+  end
   #Category scopes render action: :index
     def architecture
       @projects = Project.architecture

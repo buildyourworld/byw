@@ -13,4 +13,10 @@ class Project < ActiveRecord::Base
 	scope :sports, 			->{ where(category_id: 7)}
 	scope :technology, 		->{ where(category_id: 8)}
 	scope :emergency, 		->{ where(category_id: 9)}
+
+	def self.search(query)
+	    # where(:title, query) -> This would return an exact match of the query
+	    where("name like ?", "%#{query}%") 
+	    #where(name: "#{query}")
+  	end
 end

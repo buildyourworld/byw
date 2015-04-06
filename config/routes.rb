@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   
   resources :projects do
     collection do
+      get :search
       get :architecture
       get :business
       get :charity
