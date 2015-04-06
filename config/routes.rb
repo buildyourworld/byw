@@ -2,7 +2,19 @@ Rails.application.routes.draw do
   devise_for :users
   root 'projects#index'
   
-  resources :projects
+  resources :projects do
+    collection do
+      get :architecture
+      get :business
+      get :charity
+      get :demonstration
+      get :environment
+      get :musique
+      get :sports
+      get :technology
+      get :emergency
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

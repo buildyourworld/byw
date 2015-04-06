@@ -6,6 +6,44 @@ class ProjectsController < ApplicationController
   def index
     @projects = Project.all
   end
+  
+  #Category scopes render action: :index
+    def architecture
+      @projects = Project.architecture
+      render action: :index
+    end
+    def business
+      @projects = Project.business
+      render action: :index      
+    end
+    def charity
+      @projects = Project.charity
+      render action: :index      
+    end
+    def demonstration
+      @projects = Project.demonstration
+      render action: :index      
+    end
+    def environment
+      @projects = Project.environment
+      render action: :index
+    end
+    def musique
+      @projects = Project.musique
+      render action: :index      
+    end
+    def sports
+      @projects = Project.sports
+      render action: :index      
+    end
+    def technology
+      @projects = Project.technology
+      render action: :index      
+    end      
+    def emergency
+      @projects = Project.emergency
+      render action: :index        
+    end  
 
   # GET /projects/1
   # GET /projects/1.json
@@ -71,6 +109,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name, :description, skills_attributes: [:id, :name, :_destroy], tools_attributes: [:id, :name, :_destroy])
+      params.require(:project).permit(:name, :description, :category_id, skills_attributes: [:id, :name, :_destroy], tools_attributes: [:id, :name, :_destroy])
     end
 end
