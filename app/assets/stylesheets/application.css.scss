@@ -17,6 +17,23 @@
 @import "bootstrap";
 
 
+/*all*/
+
+a {
+	color: black;
+}
+
+#back {
+	margin-top:30px;
+}
+
+#action_btn input {
+	margin-top: 20px;
+	margin-left: 50px;
+	border: none;
+	background-color: white;
+}
+
 .row {
 	margin-left: 0px;
 	margin-right: 0px;
@@ -176,6 +193,7 @@ form#new_user.new_user {
 
 form#new_project.new_project {
 	margin-left: 150px;
+	padding-top: 40px;
 }
 
 .padding-top {
@@ -232,3 +250,36 @@ form#new_project.new_project {
 div.container-fluid {
 	font-family: Avenir;
 }
+
+#project_name {
+	width: 250px;
+}
+
+#project_description {
+	width: 500px;
+	height: 100px;
+}
+
+#new_skill {
+	display: inline-block;
+}
+
+#new_tool {
+	display: inline-block;
+}
+
+div.btn.btn-default {
+	border: none;
+}
+
+div.btn.btn-default:hover {
+	border: none;
+	background-color: white;
+}
+
+/*edit user*/
+
+.edit_user {
+	margin-left: 150px;
+}
+

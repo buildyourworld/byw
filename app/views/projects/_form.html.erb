@@ -11,16 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field pad-bot">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
+  <div class="field pad-bot">
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
 
-  <div class="field">
+  <div class="field pad-bot">
     <%= f.fields_for :skills do |skill|%>
       <%= render 'skill_fields', :f => skill %>
       <div class="btn btn-default">
@@ -29,7 +29,7 @@
     <%end%>
   </div>
 
-  <div class="field">
+  <div class="field pad-bot">
     <%= f.fields_for :tools do |tool|%>
       <%= render 'tool_fields', :f => tool %>
       <div class="btn btn-default">
@@ -38,7 +38,7 @@
     <%end%>
   </div>
 
-  <div class="actions">
+  <div class="actions" id="action_btn">
     <%= f.submit %>
   </div>
 <% end %>
