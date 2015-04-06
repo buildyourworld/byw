@@ -43,16 +43,14 @@
     </div>
   </div>
 
-  <p class="alert"><%= alert %></p>
-  <p id="notice"><%= notice %></p>
-
-  <%= form_tag search_projects_path, method: :get, class: "row center pad-bot", role: "search" do %>
+  <div class="row" id="searchbar">
+    <%= form_tag search_projects_path, method: :get, class: "row center pad-bot", role: "search" do %>
     <%= text_field_tag :search, params[:search], class: "block form-control" %>
-    <button>
+    <button id="action_btn">
       search
     </button>
   <% end %>
-  
+  </div>
   <div class="row" id="listing">
     <div class="col-sm-10">
         <% @projects.each do |project| %>

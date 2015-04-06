@@ -27,6 +27,12 @@ a {
 	margin-top:30px;
 }
 
+#action_btn {
+	border: none;
+	background-color: white;
+	margin-left: 20px;
+	vertical-align: middle;
+}
 #action_btn input {
 	margin-top: 20px;
 	margin-left: 50px;
@@ -133,7 +139,14 @@ ul {
 	font-size: 1.1em;
 }
 
+#search {
+	width: 200px;
+}
 
+#searchbar .row {
+	width: 300px;
+	display: -webkit-inline-box;
+}
 
 #short_description {
 height: 104px;
@@ -157,8 +170,7 @@ overflow: hidden;
 #listing a {
 	color: black;
 	display: block;
-	margin-top: 60px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	text-align: center;
 	font-family: Avenir;
 	text-decoration: none;
@@ -192,7 +204,7 @@ form#new_user.new_user {
 }
 
 form#new_project.new_project {
-	margin-left: 150px;
+	margin-left: 100px;
 	padding-top: 40px;
 }
 
@@ -281,5 +293,9 @@ div.btn.btn-default:hover {
 
 .edit_user {
 	margin-left: 150px;
+}
+
+form.button_to {
+	text-align: center;
 }
 
