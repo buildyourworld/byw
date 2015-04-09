@@ -103,7 +103,7 @@ ul {
 
 #home_header {
 	margin-top: 80px;
-	height: 300px;
+	height: 400px;
 	background-color: white;
 	border-right: solid 1px grey;
 }
@@ -122,7 +122,7 @@ ul {
 }
 
 #screen {
-	background-color: white;
+	background-color: lightgrey;
 	height: 600px;
 	text-align: center;
 }
@@ -147,6 +147,10 @@ ul {
 	width: 300px;
 	display: -webkit-inline-box;
 }
+div#searchbar.row {
+	text-align: right;
+}
+
 
 #short_description {
 height: 104px;
@@ -247,6 +251,15 @@ form#new_project.new_project {
 	text-decoration: none;
 }
 
+
+/*new project*/
+
+#skillstools {
+	width: 300px;
+	display: -webkit-inline-box;
+}
+
+
 /*show project*/
 
 #show_project {
@@ -257,6 +270,10 @@ form#new_project.new_project {
 	text-align: center;
 	font-size: 30px;
 	font-weight: 500;
+}
+
+div.col-sm-8 div.border {
+	width: 500px;
 }
 
 div.container-fluid {
