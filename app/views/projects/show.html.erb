@@ -1,52 +1,55 @@
 <div class="container-fluid" id="show_project">
 	
-	<div class="row">
-		<div class="row" id="show_project_title">
-			<div class="border">
-				<%= @project.name %> </br>
-			</div>
-		</div>
+	<div class="panel panel-default">
+    	<div class="panel-body">
 
-		<div class="row">
-				<div><p id="pioneer">Name of the Pioneer, why not a picture</p></div>
-				<div><p>Want to be part of it ? - Become a volunteer</p></p></div>
-				<div class="btn" id="volunteer" style="color:red">I'm in !</div>
-				<div style='color:red'>Want to share the project
-					<a href="" class="btn">Facebook</a>
-					<a href="" class="btn">Twitter</a>
-				</div> 
-		</div>
-
-	</div>
-	
-	<div class="row">
-		
-		<div class="col-sm-8 pad-top"> 
-			<div class="border" id"show_project_desc">
-				<%= @project.description %>
-				<div style="color:red;">
-	    			inside the description allow people to add one photo or video
+			<div class="row">
+				<div class="row" id="show_project_title">
+					<%= @project.name %> </br>
 				</div>
+
+				<div class="row pad-top">
+						<div><p id="pioneer">Name of the Pioneer, why not a picture</p></div>
+						<div><p>Want to be part of it ? - Become a volunteer</p></p></div>
+						<div class="btn" id="volunteer" style="color:red">I'm in !</div>
+						<div style='color:red'>Want to share the project
+							<a href="" class="btn">Facebook</a>
+							<a href="" class="btn">Twitter</a>
+						</div> 
+				</div>
+
 			</div>
-		</div>		
+			
+			<div class="row">
+				
+				<div class="col-sm-8 pad-top"> 
+					<div id"show_project_desc" style="width:530px; text-align:justify;
+">
+						<%= @project.description %>
+						<div style="color:red;">
+			    			inside the description allow people to add one photo or video
+						</div>
+					</div>
+				</div>		
 
-		<div class="col-sm-4 pad-top">
-			<div style="color:red;">
-		   	 	<div class="border">	
-	    			field skills
-	  			</div>
-	  		</div>	
+				<div class="col-sm-4 pad-top">
+					<div style="color:red;">
+				   	 	<div class="border">	
+			    			field skills
+			  			</div>
+			  		</div>	
 
-	  			<div style="color:red;" class="pad-top">	
-	  				<div class="border">
-	    				field tools
-	  				</div>			
-	  			</div>
-		
+			  			<div style="color:red;" class="pad-top">	
+			  				<div class="border">
+			    				field tools
+			  				</div>			
+			  			</div>
+				
+				</div>
+			
+			</div>
 		</div>
-	
 	</div>
-
 </div>
 
 <%# link_to 'Edit', edit_project_path(@project) %> |
