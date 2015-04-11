@@ -19,8 +19,8 @@
   
   <div class="row" id="header">
     
-      <h3><%= link_to "BYW", root_path%></h3>
-      <a type="button" href="#modal" data-toggle="modal" id"header_btn">MENU</a>
+      <div><%= link_to "BYW", root_path%></div>
+      <div id="menu"><a type="button" href="#modal" data-toggle="modal" id"header_btn">MENU</a></div>
 
         <div class="modal fade" id="modal">
         
@@ -31,74 +31,79 @@
             <div class="modal-body">
               
               <div>
-                <button type="button" class="btn" data-toggle="dropdown" aria-expanded="false" id="modal-cadre">
+                <a type="button" class="btn" data-toggle="dropdown" aria-expanded="false" id="modal-cadre">
                   Involved
-                </button>
+                </a>
                 <ul class="dropdown-menu" role="menu">
                       <%if user_signed_in?%>
-                      <li id="modal-cadre"><a href="#"><%= link_to "Your account", edit_user_registration_path%></a></li>
-                      <li id="modal-cadre"><a href="#"><%= link_to "Log out", destroy_user_session_path, method: :delete%></a></li>
+                      <li id="modal-cadre">
+                          <%= link_to "Your account", edit_user_registration_path%>
+                      </li>
+                      <li id="modal-cadre">
+                        <p style="color:red">
+                          my groups
+                        </p>
+                      </li>
+                      <li id="modal-cadre">
+                        <p style="color:red">
+                          messages
+                        </p>
+                      </li>
+                      <li id="modal-cadre">
+                          <%= link_to "Log out", destroy_user_session_path, method: :delete%>
+                      </li>
                     <%else%>
-                      <li id="modal-cadre"><a href="#"><%= link_to "Sign up", new_user_registration_path%></a></li>
-                      <li id="modal-cadre"><a href="#"><%= link_to "Log in", new_user_session_path%></a></li>
+                      <li id="modal-cadre">
+                          <%= link_to "Sign up", new_user_registration_path%>
+                      </li>
+                      <li id="modal-cadre">
+                          <%= link_to "Log in", new_user_session_path%>
+                      </li>
                     <%end%>
-                    <li id="modal-cadre"><a href="#"><%= link_to 'New Project', new_project_path %></a></li>
-                    <li id="modal-cadre"><a href="#"><%= link_to "emergency", emergency_projects_path%></a></li>
+                    <li id="modal-cadre">
+                        <%= link_to 'New Project', new_project_path %>
+                    </li>
+                    <li id="modal-cadre">
+                      <%= link_to "emergency", emergency_projects_path%>
+                    </li>
                   </ul>
               </div>
 
 
               <div>
-                <button type="button" class="btn" data-toggle="dropdown" aria-expanded="false" id="modal-cadre">
+                <a type="button" class="btn" data-toggle="dropdown" aria-expanded="false" id="modal-cadre">
                   Discover
-                </button>
+                </a>
                 
                 <ul class="dropdown-menu" role="menu">
                       
                       <li id="modal-cadre">
                         <a href="#">
-                             <%= form_tag search_projects_path, method: :get, class: "row center pad-bot", role: "search" do %>
+                            <%= form_tag search_projects_path, method: :get, class: "row center pad-bot", role: "search" do %>
                             <%= text_field_tag :search, params[:search], class: "block form-control" %>
                             <button id="action_btn">
                               search
                             </button>
                             <% end %>
-                        </a>
+                          </a>
                       </li>
-                      <li id="modal-cadre">
-                        <a href="#">
-                          <%= link_to "Log out", destroy_user_session_path, method: :delete%>
-                      </a>
-                      </li>
-                      <li id="modal-cadre">
-                        <a href="#">
+                    <li id="modal-cadre">
                         <%= link_to "architecture", architecture_projects_path%>
-                      </a>
                     </li>
-                      <li id="modal-cadre">
-                        <a href="#">
-                          <%= link_to "charity", charity_projects_path%>
-                        </a>
-                      </li>
                     <li id="modal-cadre">
-                      <a href="#">
+                        <%= link_to "charity", charity_projects_path%>
+                    </li>
+                    <li id="modal-cadre">
                         <%= link_to "environment", environment_projects_path%>
-                      </a>
                     </li>
                     <li id="modal-cadre">
-                      <a href="#">
                         <%= link_to "musique", musique_projects_path%>
-                      </a>
                     </li>
                     <li id="modal-cadre">
-                      <a href="#">
                         <%= link_to "technology", technology_projects_path%>
-                      </a>
                     </li>
                     <li id="modal-cadre">
-                      <a href="#">
                         <%= link_to "sports", sports_projects_path%>
-                      </a>
                     </li>
                   </ul>
               </div>
