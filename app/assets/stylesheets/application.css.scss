@@ -17,6 +17,49 @@
 @import "bootstrap";
 
 
+
+
+/*header*/
+
+#header {
+	display: inline-block;
+}
+
+
+h3 {
+	font-family: Avenir;
+	font-weight: normal;
+	width: 40px;
+}
+
+#menu_btn {
+	background-color: transparent;
+	border: none;
+	font-size: 40px;
+	font-weight: normal;
+	font-family:Avenir;
+}
+
+/*modal*/
+
+#modal {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-header {
+	border: none;
+}
+
+.modal-body {
+
+}
+
+.modal-footer {
+	border: none;
+}
+
 /*all*/
 
 body {
@@ -105,25 +148,8 @@ ul {
 	list-style-type:none;
 }
 
-#home_header {
-	padding-right: 1100px;
-	margin-top: 80px;
-	height: 400px;
-	background-color: transparent;
-	/*border-right: solid 1px #FC4A0A;*/
-}
 
-#home_header a {
-	color: black;
-	display: block;
-	margin-top: 30px;
-	margin-bottom: 30px;
-	text-align: center;
-	font-family: Avenir;
-	text-decoration: none;
-}
 #home {
-	padding-left: 100px;
 }
 
 #screen {
@@ -211,11 +237,6 @@ h2 {
 	margin-left: 150px;	
 }
 
-h3 {
-	font-family: Avenir;
-	font-weight: normal;
-	margin-left: 150px;
-}
 
 form#new_user.new_user {
 	margin-left: 150px;

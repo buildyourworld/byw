@@ -17,35 +17,75 @@
 
 <div class="container-fluid">
   
-  <div class="row">
+  <div class="row" id="header">
     
-    <div class="navbar navbar-default navbar-fixed-top" id="home_header">
-      <%= link_to "BYW", root_path%>
-      <%if user_signed_in?%>
-        <%= link_to "Your account", edit_user_registration_path%>
-      <%else%>
-        <%= link_to "Sign up", new_user_registration_path%>
-      <%end%>
-      <%= link_to "Log in", new_user_session_path%>
-      <%= link_to 'New Project', new_project_path %>
-      <%= link_to "Log out", destroy_user_session_path, method: :delete%>
-      <p> Emergency</p>
-    </div>
-    
-    <div id="home">
-      <%= yield %>
-    </div>
-  
+      <h3><%= link_to "BYW", root_path%></h3>
+      <a type="button" href="#modal" data-toggle="modal" id"header_btn">MENU</a>
+
+                  <div class="modal fade" id="modal">
+                  
+                            <div class="modal-header">
+                              <a class="close" data-dismiss="modal">&times;</a>  
+                            </div>
+                  
+                            <div class="modal-body">
+                                <div class="row">
+                                    <p> <%if user_signed_in?%>
+                                      <%= link_to "Your account", edit_user_registration_path%>
+                                    <%else%>
+                                      <%= link_to "Sign up", new_user_registration_path%>
+                                    <%end%>
+                                    <%= link_to "Log in", new_user_session_path%>
+                                    <%= link_to 'New Project', new_project_path %>
+                                    <%= link_to "Log out", destroy_user_session_path, method: :delete%>
+                                    <p> Emergency</p></p>
+                                </div>
+
+                                <div class="row" id="cat_search">
+                                    <div id="searchbar">
+                                      <%= form_tag search_projects_path, method: :get, class: "row center pad-bot", role: "search" do %>
+                                      <%= text_field_tag :search, params[:search], class: "block form-control" %>
+                                      <button id="action_btn">
+                                        search
+                                      </button>
+                                    <% end %>
+                                    </div>
+
+                                    <div id="categories_list">
+                                          <ul>
+                                            <li><%= link_to "architecture", architecture_projects_path%></li>
+                                            <li><%= link_to "charity", charity_projects_path%></li>
+                                            <li><%= link_to "demonstration", demonstration_projects_path%></li>
+                                            <li><%= link_to "environment", environment_projects_path%></li>
+                                            <li><%= link_to "musique", musique_projects_path%></li>
+                                            <li><%= link_to "sports", sports_projects_path%></li>
+                                            <li><%= link_to "technology", technology_projects_path%></li>
+                                            <li><%= link_to "emergency", emergency_projects_path%></li>
+                                          </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="modal-footer">
+                              <a href="#" class="btn" data-dismiss="modal">Close</a>
+                            </div>
+                  </div>
   </div>
 
+    
+  <div class="row" id="home">
+    <%= yield %>
+  </div>
+  
 </div>
 
-    <footer class="footer" id="footer">
-      <a href="" class="btn">Staskstact</a>
-      <a href="" class="btn">Contact us</a>
-      <a href="" class="btn">Facebook</a>
-      <a href="" class="btn">Twitter</a>
-    </footer>
+<footer class="footer" id="footer">
+  <a href="" class="btn">Staskstact</a>
+  <a href="" class="btn">Contact us</a>
+  <a href="" class="btn">Facebook</a>
+  <a href="" class="btn">Twitter</a>
+</footer>
 
 
 </body>
