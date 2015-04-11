@@ -12,42 +12,50 @@
   <% end %>
 
 <div class="panel panel-default">
+
+    <div class="panel-heading">
+        <h1>Create a project</h1>
+    </div>
+
     <div class="panel-body">
 
-  <div class="form-group">
-    <%= f.label :name %><br>
-    <%= f.text_field :name, class: "form-control" %>
-  </div>
-<div class="form-group">
-    <%= f.label :description %><br>
-    <%= f.text_area :description, class: "form-control" %>
-  </div>
+        <div class="form-group">
+          <%= f.label :name %><br>
+          <%= f.text_field :name, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :description %><br>
+          <%= f.text_area :description, class: "form-control" %>
+        </div>
 
-  <div class="form-group">
-    <%= f.label :category %><br>
-    <%= f.collection_select(:category_id, Category.all, :id, :name) %>
-  </div>
-  <div class="form-group">
-    <%= f.fields_for :skills do |skill|%>
-      <%= render 'skill_fields', :f => skill %>
-      <div class="btn btn-default">
-        <%= link_to_add_association 'add skill', f, :skills%>
-      </div>
-    <%end%>
-  </div>
+        <div class="form-group">
+          <%= f.label :category %><br>
+          <%= f.collection_select(:category_id, Category.all, :id, :name) %>
+        </div>
+        <div class="form-group">
+          <%= f.fields_for :skills do |skill|%>
+            <%= render 'skill_fields', :f => skill %>
+            <div class="btn btn-default">
+              <%= link_to_add_association 'add skill', f, :skills%>
+            </div>
+          <%end%>
+        </div>
 
-  <div class="form-group">
-    <%= f.fields_for :tools do |tool|%>
-      <%= render 'tool_fields', :f => tool %>
-      <div class="btn btn-default">
-        <%= link_to_add_association 'add tool', f, :tools%>
-      </div>
-    <%end%>
-  </div>
-  <div class="actions" id="action_btn">
-    <%= f.submit %>
-  </div>
-</div>
+        <div class="form-group">
+          <%= f.fields_for :tools do |tool|%>
+            <%= render 'tool_fields', :f => tool %>
+            <div class="btn btn-default">
+              <%= link_to_add_association 'add tool', f, :tools%>
+            </div>
+          <%end%>
+        </div>
+        
+        <div class="actions" id="action_btn">
+          <%= f.submit %>
+        </div>
+    
+    </div>
+
 </div>
 
 <% end %>

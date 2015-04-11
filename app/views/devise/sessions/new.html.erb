@@ -1,9 +1,12 @@
-<h2 class="padding-top pad-bot">Log in</h2>
-
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
 
 <div class="panel panel-default" style="width:300px">
+
+    <div class="panel-heading">
+        <h2 class="padding-top pad-bot">Log in</h2>
+    </div>
+    
     <div class="panel-body">
         <div class="form-group pad-bot">
           <%= f.label :email %><br />
