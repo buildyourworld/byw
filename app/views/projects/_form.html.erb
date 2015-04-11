@@ -36,7 +36,10 @@
           <%= f.fields_for :skills do |skill|%>
             <%= render 'skill_fields', :f => skill %>
             <div class="btn btn-default">
-              <%= link_to_add_association 'add skill', f, :skills%>
+                <%= link_to_add_association 'add skill', f, :skills%>
+              <div class="btn btn-default">
+                <%= link_to_remove_association 'remove skill', f %>   
+              </div>
             </div>
           <%end%>
         </div>
@@ -46,6 +49,9 @@
             <%= render 'tool_fields', :f => tool %>
             <div class="btn btn-default">
               <%= link_to_add_association 'add tool', f, :tools%>
+            </div>
+            <div class="btn btn-default">
+              <%= link_to_remove_association 'remove tool', f %>
             </div>
           <%end%>
         </div>
