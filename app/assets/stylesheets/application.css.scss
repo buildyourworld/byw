@@ -17,11 +17,48 @@
 @import "bootstrap";
 
 
+
+
+/*all*/
+
+body {
+	background-color: #F8FFFF;
+}
+
+a {
+	color: black;
+}
+
+#back {
+	margin-top:30px;
+}
+
+#action_btn {
+	border: none;
+	background-color: white;
+	margin-left: 20px;
+	vertical-align: middle;
+}
+#action_btn input {
+	margin-top: 20px;
+	margin-left: 50px;
+	border: none;
+	background-color: white;
+}
+
+.row {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+
 /*header*/
 
 div#header.row{
 	width: 100%;
 	display: -webkit-inline-box;
+	margin-left: 15px;
+	margin-top: 15px;
 }
 
 #menu_btn {
@@ -29,7 +66,7 @@ div#header.row{
 	border: none;
 	font-size: 40px;
 	font-weight: normal;
-	font-family:Avenir;
+	font-family:Futura;
 	margin-left: 20px;
 }
 
@@ -39,11 +76,13 @@ div#header.row{
 
 div#header.row a {
 	font-size: 21px;
+	font-family: Futura;
 }
 
 div#header.row a:hover {
 	text-decoration: none;
 }
+
 
 /*modal*/
 
@@ -108,39 +147,6 @@ div#header.row a:hover {
 	border-radius: 4px;
 	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 	background-clip: padding-box;
-}
-
-
-/*all*/
-
-body {
-	background-color: #F8FFFF;
-}
-
-a {
-	color: black;
-}
-
-#back {
-	margin-top:30px;
-}
-
-#action_btn {
-	border: none;
-	background-color: white;
-	margin-left: 20px;
-	vertical-align: middle;
-}
-#action_btn input {
-	margin-top: 20px;
-	margin-left: 50px;
-	border: none;
-	background-color: white;
-}
-
-.row {
-	margin-left: 0px;
-	margin-right: 0px;
 }
 
 	/*carousel*/
@@ -210,21 +216,25 @@ ul {
 }
 
 #namesite {
-	font-family: Lobster;
+	font-family: Futura;
 	font-weight: bold;
 	font-size: 3em;
 	line-height: 300px;
 }
 
 #pitchline {
-	font-family: Lobster;
+	font-family: Futura;
 	font-size: 1.1em;
 }
 
+#short_name {
+	font-weight: bold; 
+}
+
 #short_description {
-height: 104px;
-word-break: break-word;
-overflow: hidden;	
+	height: 104px;
+	word-break: break-word;
+	overflow: hidden;	
 }
 
 /*#main {
@@ -249,23 +259,23 @@ overflow: hidden;
 	display: block;
 	margin-bottom: 20px;
 	text-align: center;
-	font-family: Avenir;
+	font-family: Open Sans;
 	text-decoration: none;
 }
 
 th {
-	font-family: Avenir;
+	font-family: Open Sans;
 	font-weight: normal;
 }
 
 h1 {
-	font-family: Avenir;
+	font-family: Open Sans;
 	font-weight: normal;
 	margin-left: 150px;
 }
 
 h2 {
-	font-family: Avenir;
+	font-family: Open Sans;
 	font-weight: normal;
 }
 
@@ -314,7 +324,7 @@ form#new_project.new_project {
 	margin-top: 20px;
 	color: black;
 	text-align: center;
-	font-family: Avenir;
+	font-family: Open Sans;
 	text-decoration: none;
 }
 
@@ -328,6 +338,25 @@ form#new_project.new_project {
 
 /*show project*/
 
+.panel-default {
+	border-color: none;
+}
+
+.panel {
+	margin-bottom: 20px;
+	background-color: #F8FFFF;
+	border: none;
+	border-radius: 4px;
+	box-shadow: none;
+}
+
+.panel-default > .panel-heading {
+	margin-bottom: 25px;
+	border-bottom: none;
+	background-color: transparent;
+	border-color: transparent;
+}
+
 #show_project {
 	margin-top: 50px;
 }
@@ -339,14 +368,18 @@ form#new_project.new_project {
 }
 
 #show_project_desc {
+	text-align:justify;
 }
 
 div.container-fluid {
-	font-family: Avenir;
+	font-family: Open Sans;
 }
 
-
-
+.well {
+ 	background-color: white;
+ 	border: none;
+ 	box-shadow: none;
+ }
 
 #project_name {
 }
@@ -370,6 +403,10 @@ div.btn.btn-default {
 div.btn.btn-default:hover {
 	border: none;
 	background-color: white;
+}
+
+div #volunteer.btn {
+	background-color: #ff7264;
 }
 
 /*edit user*/

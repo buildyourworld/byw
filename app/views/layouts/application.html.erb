@@ -81,6 +81,7 @@
                         <a href="#">
                             <%= form_tag search_projects_path, method: :get, class: "row center pad-bot", role: "search" do %>
                             <%= text_field_tag :search, params[:search], class: "block form-control" %>
+                             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                             <button id="action_btn">
                               search
                             </button>
@@ -92,6 +93,9 @@
                     </li>
                     <li id="modal-cadre">
                         <%= link_to "charity", charity_projects_path%>
+                    </li>
+                    <li id="modal-cadre">
+                        <%= link_to "demonstration", demonstration_projects_path%>
                     </li>
                     <li id="modal-cadre">
                         <%= link_to "environment", environment_projects_path%>

@@ -1,56 +1,62 @@
 <div class="container-fluid" id="show_project">
 	
-	<div class="panel panel-default">	
+	<div class="panel panel-default" style="width:90%; margin:auto">	
 		<div class="panel-heading" id="show_project_title">
 					<%= @project.name %> </br>
 		</div>
 
-		<div class="panel-body">
-			<div class="pad-top">
-				<div><p id="pioneer">Name of the Pioneer, why not a picture</p></div>
-				<div><p>Want to be part of it ? - Become a volunteer</p></p></div>
-				<div class="btn" id="volunteer" style="color:red">I'm in !</div>
-				<div style='color:red'>Want to share the project
-					<a href="" class="btn">Facebook</a>
-					<a href="" class="btn">Twitter</a>
-				</div> 
+		<div class="panel-body" style="width:95%; margin:auto">
+			<div class="row">
+				<div class="col-sm-6 well" style="color:red;">
+					picture or video
+				</div>
+				<div class="col-sm-1">
+				</div>
+				<div class="col-sm-5 well">
+					<div><p id="pioneer">Name of the Pioneer, why not a picture</p></div>
+					<div><p>Become a volunteer</p></p></div>
+					<div class="btn" id="volunteer" style="color:red">I'm in !</div>
+					<div>Share the project
+						<a href="" class="btn">Facebook</a>
+						<a href="" class="btn">Twitter</a>
+					</div> 
+				</div>
 			</div>
-
 			
 			
 			<div class="row">
 				
-				<div class="col-sm-8 pad-top"> 
-					<div id"show_project_desc" style="width:530px; text-align:justify;
-">
+				<div class="col-sm-6 well pad-top"> 
+					<div id="show_project_desc">
 						<%= @project.description %>
 						<div style="color:red;">
 			    			inside the description allow people to add one photo or video
 						</div>
 					</div>
-				</div>		
+				</div>
 
-				<div class="col-sm-4 pad-top">
+				<div class="col-sm-1">
+				</div>
+
+				<div class="col-sm-5 well pad-top">
 					<div style="color:red;">
 				   	 	<div class="border">	
 			    			field skills
 			  			</div>
 			  		</div>	
 
-			  			<div style="color:red;" class="pad-top">	
+			  			<div style="color:red;" id="showpanels" class="pad-top">	
 			  				<div class="border">
 			    				field tools
 			  				</div>			
 			  			</div>
-				
 				</div>
-			
 			</div>
 		</div>
 	</div>
 </div>
 
-<%# link_to 'Edit', edit_project_path(@project) %> |
+<%# link_to 'Edit', edit_project_path(@project) %>
 <div id="back">
 <%= link_to 'Back', projects_path %>
 </div>
