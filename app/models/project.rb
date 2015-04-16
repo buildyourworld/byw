@@ -4,6 +4,10 @@ class Project < ActiveRecord::Base
 	accepts_nested_attributes_for :skills, :reject_if => :all_blank, :allow_destroy => true
 	accepts_nested_attributes_for :tools, :reject_if => :all_blank, :allow_destroy => true
 
+	validates :name, presence: true
+	validates :description, presence: true
+  	validates_presence_of :skills, :tools
+
 	scope :architecture, 	->{ where(category_id: 1)}
 	scope :business, 		->{ where(category_id: 2)}
 	scope :charity, 		->{ where(category_id: 3)}

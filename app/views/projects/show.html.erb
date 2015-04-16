@@ -13,7 +13,7 @@
 				<div class="col-sm-1">
 				</div>
 				<div class="col-sm-5 well">
-					<div><p id="pioneer">Name of the Pioneer, why not a picture</p></div>
+					<div><p id="pioneer"><%= current_user.email%></p></div>
 					<div><p>Become a volunteer</p></p></div>
 					<div class="btn" id="volunteer" style="color:red">I'm in !</div>
 					<div>Share the project
@@ -39,15 +39,25 @@
 				</div>
 
 				<div class="col-sm-5 well pad-top">
-					<div style="color:red;">
-				   	 	<div class="border">	
-			    			field skills
+					<div>
+				   	 	<div class="border">
+				   	 		<ul>
+				   	 		<p>Skills:</p>
+				   	 		<% @project.skills.each do |s|%>
+				   	 			<li><%= s.name%></li>
+				   	 		<%end%>
+				   	 		</ul>	
 			  			</div>
 			  		</div>	
 
-			  			<div style="color:red;" id="showpanels" class="pad-top">	
+			  			<div id="showpanels" class="pad-top">	
 			  				<div class="border">
-			    				field tools
+					   	 		<ul>
+					   	 		<p>Tools:</p>
+						   	 		<% @project.tools.each do |t|%>
+						   	 			<li><%= t.name%></li>
+						   	 		<%end%>
+					   	 		</ul>
 			  				</div>			
 			  			</div>
 				</div>
