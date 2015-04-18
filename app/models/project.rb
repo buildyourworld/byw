@@ -1,4 +1,5 @@
 class Project < ActiveRecord::Base
+	mount_uploader :image, ImageUploader
 	has_many :skills
 	has_many :tools
 	accepts_nested_attributes_for :skills, :reject_if => :all_blank, :allow_destroy => true

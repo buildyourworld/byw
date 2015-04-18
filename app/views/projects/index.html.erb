@@ -47,14 +47,10 @@
   
   <div class="row" id="listing">
       <% @projects.each do |project| %>
-          <div class="col-sm-4 pad-bot">
-              <div class="thumbnail">
-                <img src="..." alt="...">
-                <div class="caption">
-                  <div class="row" id="short_name"><%= link_to project.name, project_path(project) %></div>
-                  <div class="row center" id="short_description"><%= project.description %></div>
-                </div>
-              </div>         
+          <div class="col-sm-4 pad-bot thumbnail">
+            <%= image_tag project.image.url(:thumb)%>
+            <div class="row" id="short_name"><%= link_to project.name, project_path(project) %></div>
+            <div class="row center" id="short_description"><%= project.description %></div>
           </div>            
       <% end %>
   </div>
