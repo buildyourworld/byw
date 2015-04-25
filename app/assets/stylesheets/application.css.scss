@@ -254,6 +254,11 @@ ul {
 
 	/*listing*/
 
+#listing {
+	margin-left: 60px;
+	margin-right: 60px;
+}
+
 #listing a {
 	color: black;
 	display: block;
@@ -261,6 +266,15 @@ ul {
 	text-align: center;
 	font-family: Open Sans;
 	text-decoration: none;
+}
+
+#listing.col-sm-4 {
+	width: 33.333%;
+	padding-right: 20px;
+}
+
+img {
+	border-radius: 4px;
 }
 
 th {

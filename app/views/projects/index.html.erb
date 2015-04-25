@@ -18,7 +18,7 @@
         <div class="carousel-inner">
             <div class="active item">
                 <div id="carousel1">
-                    <p id="namesite">BUILD YOUR WORLD</p>
+                    <p id="namesite">AEDIFICARE MUNDI</p>
                     <p id="pitchline">"La tâche de gouverner la terre va nous échoir. De là cette question : comment voulons-nous modeler l'avenir de l'humanité ?"</p>
                  </div>
             </div>
@@ -47,17 +47,13 @@
   
   <div class="row" id="listing">
       <% @projects.each do |project| %>
-          <div class="col-sm-4 pad-bot thumbnail">
+          <div class="col-sm-4 pad-bot">
+            <div class= "thumbnail">
             <%= image_tag project.image.url(:thumb)%>
             <div class="row" id="short_name"><%= link_to project.name, project_path(project) %></div>
             <div class="row center" id="short_description"><%= project.description %></div>
+          </div>
           </div>            
       <% end %>
   </div>
      
-</div>
-  <div class="row">
-    <div class="col-sm-6 col-md-4">
-      
-    </div>
-</div>

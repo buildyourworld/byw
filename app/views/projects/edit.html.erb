@@ -2,7 +2,8 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @project %> |
+<td><%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<%= link_to 'Show', @project %>
 <div id="back">
 <%= link_to 'Back', projects_path %>
 </div>
