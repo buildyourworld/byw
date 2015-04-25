@@ -29,88 +29,67 @@
             </div>
         
             <div class="modal-body">
-              
-              <div>
-                <a type="button" class="btn" data-toggle="dropdown" aria-expanded="false" id="modal-cadre">
-                  Involved
-                </a>
-                <ul class="dropdown-menu" role="menu">
-                      <%if user_signed_in?%>
-                      <li id="modal-cadre">
-                          <%= link_to "Your account", edit_user_registration_path%>
-                      </li>
-                      <li id="modal-cadre">
-                        <p style="color:red">
-                          my groups
-                        </p>
-                      </li>
-                      <li id="modal-cadre">
-                        <p style="color:red">
-                          messages
-                        </p>
-                      </li>
-                      <li id="modal-cadre">
-                          <%= link_to "Log out", destroy_user_session_path, method: :delete%>
-                      </li>
-                    <%else%>
-                      <li id="modal-cadre">
-                          <%= link_to "Sign up", new_user_registration_path%>
-                      </li>
-                      <li id="modal-cadre">
-                          <%= link_to "Log in", new_user_session_path%>
-                      </li>
-                    <%end%>
-                    <li id="modal-cadre">
-                        <%= link_to 'New Project', new_project_path %>
-                    </li>
-                    <li id="modal-cadre">
-                      <%= link_to "emergency", emergency_projects_path%>
-                    </li>
-                  </ul>
-              </div>
-
-
-              <div>
-                <a type="button" class="btn" data-toggle="dropdown" aria-expanded="false" id="modal-cadre">
-                  Discover
-                </a>
                 
-                <ul class="dropdown-menu" role="menu">
-                      
-                      <li id="modal-cadre">
-                        <a href="#">
-                            <%= form_tag search_projects_path, method: :get, class: "row center pad-bot", role: "search" do %>
-                            <%= text_field_tag :search, params[:search], class: "block form-control" %>
-                             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                            <button id="action_btn">
-                              search
-                            </button>
-                            <% end %>
-                          </a>
-                      </li>
-                    <li id="modal-cadre">
-                        <%= link_to "architecture", architecture_projects_path%>
-                    </li>
-                    <li id="modal-cadre">
-                        <%= link_to "charity", charity_projects_path%>
-                    </li>
-                    <li id="modal-cadre">
-                        <%= link_to "demonstration", demonstration_projects_path%>
-                    </li>
-                    <li id="modal-cadre">
-                        <%= link_to "environment", environment_projects_path%>
-                    </li>
-                    <li id="modal-cadre">
-                        <%= link_to "musique", musique_projects_path%>
-                    </li>
-                    <li id="modal-cadre">
-                        <%= link_to "technology", technology_projects_path%>
-                    </li>
-                    <li id="modal-cadre">
-                        <%= link_to "sports", sports_projects_path%>
-                    </li>
-                  </ul>
-              </div>
+                  <div id="modal-cadre">
+                    <%= link_to 'New Project', new_project_path %>
+                  </div>
+                  
+                  <%if user_signed_in?%>
+                    <div id="modal-cadre">
+                        <%= link_to "Your account", edit_user_registration_path%>
+                    </div>
+                    <div id="modal-cadre">
+                        <%= link_to "Log out", destroy_user_session_path, method: :delete%>
+                    </div>
+                  
+                  <%else%>
+                    <div id="modal-cadre">
+                        <%= link_to "Sign up", new_user_registration_path%>
+                    </div>
+                    <div id="modal-cadre">
+                        <%= link_to "Log in", new_user_session_path%>
+                    </div>
+                  <%end%>    
+
+                    <a type="button" class="btn" data-toggle="dropdown" aria-expanded="false" id="modal-cadre">
+                      Discover
+                    </a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                          
+                          <li id="modal-cadre">
+                            <a href="#">
+                                <%= form_tag search_projects_path, method: :get, class: "row center pad-bot", role: "search" do %>
+                                <%= text_field_tag :search, params[:search], class: "block form-control" %>
+                                 <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                <button id="action_btn">
+                                  search
+                                </button>
+                                <% end %>
+                              </a>
+                          </li>
+                        <li id="modal-cadre">
+                            <%= link_to "architecture", architecture_projects_path%>
+                        </li>
+                        <li id="modal-cadre">
+                            <%= link_to "charity", charity_projects_path%>
+                        </li>
+                        <li id="modal-cadre">
+                            <%= link_to "demonstration", demonstration_projects_path%>
+                        </li>
+                        <li id="modal-cadre">
+                            <%= link_to "environment", environment_projects_path%>
+                        </li>
+                        <li id="modal-cadre">
+                            <%= link_to "musique", musique_projects_path%>
+                        </li>
+                        <li id="modal-cadre">
+                            <%= link_to "technology", technology_projects_path%>
+                        </li>
+                        <li id="modal-cadre">
+                            <%= link_to "sports", sports_projects_path%>
+                        </li>
+                      </ul>
 
             </div>
 

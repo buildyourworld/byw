@@ -102,6 +102,7 @@ div#header.row a:hover {
 	background: #ff7264;
 	outline: none;
 	text-decoration: none;
+	border-radius: 4px;
 }
 
 .modal-header {
@@ -126,6 +127,7 @@ div#header.row a:hover {
 	margin: 0 0 1% 1%;
 	font-weight: 200;
 	display: table;
+	border-radius: 4px;
 }
 
 .dropdown-menu {
@@ -135,8 +137,6 @@ div#header.row a:hover {
 	display: none;
 	float: right;
 	min-width: 100%;
-	/* padding: 5px 0; */
-	margin: 2px 0 0;
 	margin-top: 200px;
 	list-style: none;
 	font-size: 14px;
@@ -147,6 +147,7 @@ div#header.row a:hover {
 	border-radius: 4px;
 	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 	background-clip: padding-box;
+	data-backdrop: static;
 }
 
 	/*carousel*/
