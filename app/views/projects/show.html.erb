@@ -7,26 +7,24 @@
 
 		<div class="panel-body" style="width:95%; margin:auto">
 			<div class="row">
-				<div class="col-sm-6 well" style="color:red;">
+				<div class="col-sm-8">
 					<%= image_tag @project.image.url(:showth)%>
 				</div>
-				<div class="col-sm-1">
-				</div>
-				<div class="col-sm-5 well">
+				<div class="col-sm-4 well" style="text-align:center">
 					<div><p id="pioneer"></p></div>
-					<div><p>Become a volunteer</p></p></div>
-					<div class="btn" id="volunteer" style="color:red">I'm in !</div>
-					<div>Share the project
-						<a href="" class="btn">Facebook</a>
-						<a href="" class="btn">Twitter</a>
+						<a href="" class="btn" id="volunteer">Become a volunteer</a>
+					<div id="share">
+						<p>Share the project</p>
+						<a href="" class="btn pad-top">Facebook</a>
+						<a href="" class="btn pad-top">Twitter</a>
 					</div> 
 				</div>
 			</div>
 			
 			
-			<div class="row">
+			<div class="row pad-top">
 				
-				<div class="col-sm-6 well pad-top"> 
+				<div class="col-sm-8 well pad-top"> 
 					<div id="show_project_desc">
 						<%= @project.description %>
 						<div style="color:red;">
@@ -38,35 +36,31 @@
 				<div class="col-sm-1">
 				</div>
 
-				<div class="col-sm-5 well pad-top">
+				<div class="col-sm-3 well pad-top">
 					<div>
-				   	 	<div class="border">
-				   	 		<ul>
-				   	 		<p>Skills:</p>
-				   	 		<% @project.skills.each do |s|%>
-				   	 			<li><%= s.name%></li>
-				   	 		<%end%>
-				   	 		</ul>	
-			  			</div>
+			   	 		<ul>
+			   	 		<p>Skills wanted :</p>
+			   	 		<% @project.skills.each do |s|%>
+			   	 			<li><%= s.name%></li>
+			   	 		<%end%>
+			   	 		</ul>	
 			  		</div>	
 
 			  			<div id="showpanels" class="pad-top">	
-			  				<div class="border">
-					   	 		<ul>
-					   	 		<p>Tools:</p>
-						   	 		<% @project.tools.each do |t|%>
-						   	 			<li><%= t.name%></li>
-						   	 		<%end%>
-					   	 		</ul>
-			  				</div>			
+				   	 		<ul>
+				   	 		<p>Tools needed :</p>
+					   	 		<% @project.tools.each do |t|%>
+					   	 			<li><%= t.name%></li>
+					   	 		<%end%>
+				   	 		</ul>
 			  			</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<%= link_to 'Edit', edit_project_path(@project) %>
 <div id="back">
-<%= link_to 'Back', projects_path %>
+	<%= link_to 'Edit', edit_project_path(@project) %>
+	<%= link_to 'Back', projects_path %>
+</div>
 </div>

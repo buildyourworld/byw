@@ -31,6 +31,11 @@ a {
 
 #back {
 	margin-top:30px;
+	margin-left: 50px;
+}
+
+#back a {
+	padding: 15px;
 }
 
 #action_btn {
@@ -46,6 +51,11 @@ a {
 	margin-left: 50px;
 	border: none;
 	background-color: transparent;
+}
+
+.btn {
+	font-size: 16px;
+	font-family: Open Sans;
 }
 
 .btn-default {
@@ -177,7 +187,7 @@ div#modal.modal.fade.in {
 	min-width: 100%;
 	margin-top: 200px;
 	list-style: none;
-	font-size: 14px;
+	font-size: 16px;
 	text-align: center;
 	background-color: transparent;
 	border: 1px solid #ccc;
@@ -271,9 +281,10 @@ ul {
 }
 
 #short_description {
-	height: 104px;
-	word-break: break-word;
+	height: 109px;
+	white-space: normal;
 	overflow: hidden;	
+	text-overflow: ellipsis;
 }
 
 /*#main {
@@ -304,6 +315,7 @@ ul {
 	margin-bottom: 20px;
 	text-align: center;
 	font-family: Open Sans;
+	font-size: 14px;
 	text-decoration: none;
 }
 
@@ -318,17 +330,20 @@ img {
 
 th {
 	font-family: Open Sans;
+	font-size: 22px;
 	font-weight: normal;
 }
 
 h1 {
 	font-family: Open Sans;
+	font-size: 22px;
 	font-weight: normal;
 	margin-left: 150px;
 }
 
 h2 {
 	font-family: Open Sans;
+	font-size: 22px;
 	font-weight: normal;
 }
 
@@ -378,6 +393,7 @@ form#new_project.new_project {
 	color: black;
 	text-align: center;
 	font-family: Open Sans;
+	font-size: 16px;
 	text-decoration: none;
 }
 
@@ -392,16 +408,16 @@ form#new_project.new_project {
 /*show project*/
 
 div.panel.panel-default {
-	margin-top: 50px
+	margin-top: 50px;
+	margin-left: 100px;
 }
 
 .panel-default {
-	border-color: #ddd;
 }
 
 .panel {
 	margin-bottom: 20px;
-	background-color: #ddd;
+	background-color: #F8FFFF;
 	border: #ddd;
 	border-radius: 4px;
 	box-shadow: none;
@@ -430,13 +446,20 @@ div.panel.panel-default {
 
 div.container-fluid {
 	font-family: Open Sans;
+	font-size: 16px;
 }
 
 .well {
- 	background-color: white;
+	background-color: transparent;
  	border: none;
  	box-shadow: none;
  }
+
+#share {
+	display: block;
+	margin-top: 30px;
+	text-align: center;
+}
 
 #project_name {
 }
@@ -453,8 +476,8 @@ div.container-fluid {
 	display: inline-block;
 }
 
-div #volunteer.btn {
-	background-color: #ff7264;
+#volunteer {
+	background-color: #f70;
 }
 
 /*edit user*/
