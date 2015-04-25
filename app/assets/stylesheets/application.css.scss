@@ -35,20 +35,50 @@ a {
 
 #action_btn {
 	border: none;
-	background-color: white;
+	background-color: transparent;
 	margin-left: 20px;
 	vertical-align: middle;
+	width: 30%
 }
+
 #action_btn input {
 	margin-top: 20px;
 	margin-left: 50px;
 	border: none;
-	background-color: white;
+	background-color: transparent;
 }
+
+.btn-default {
+	background-color: transparent;
+	border:none;
+}
+
+.btn-default:hover {
+	background-color: transparent;
+	border:none;
+}
+
+div.btn.btn-default {
+	border: none;
+}
+
+div.btn.btn-default:hover {
+	border: none;
+	background-color: transparent;
+}
+
+div.btn.btn-default:hover {
+	background : transparent;
+}
+
 
 .row {
 	margin-left: 0px;
 	margin-right: 0px;
+}
+
+.form-control {
+	width: 50%
 }
 
 
@@ -85,6 +115,14 @@ div#header.row a:hover {
 
 
 /*modal*/
+
+div.modal-backdrop.fade.in {
+	margin-top : 50px;
+}
+
+div#modal.modal.fade.in {
+	margin-top : 50px;
+}
 
 #modal {
 	width: 100%;
@@ -353,14 +391,18 @@ form#new_project.new_project {
 
 /*show project*/
 
+div.panel.panel-default {
+	margin-top: 50px
+}
+
 .panel-default {
-	border-color: none;
+	border-color: #ddd;
 }
 
 .panel {
 	margin-bottom: 20px;
-	background-color: #F8FFFF;
-	border: none;
+	background-color: #ddd;
+	border: #ddd;
 	border-radius: 4px;
 	box-shadow: none;
 }
@@ -409,15 +451,6 @@ div.container-fluid {
 
 #new_tool {
 	display: inline-block;
-}
-
-div.btn.btn-default {
-	border: none;
-}
-
-div.btn.btn-default:hover {
-	border: none;
-	background-color: white;
 }
 
 div #volunteer.btn {
