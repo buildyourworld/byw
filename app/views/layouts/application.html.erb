@@ -31,7 +31,7 @@
             </div>
         
             <div class="modal-body">
-                
+              <div id="vanish-div">
                   <div id="modal-cadre">
                     <%= link_to 'New Project', new_project_path %>
                   </div>
@@ -53,13 +53,14 @@
                     </div>
                   <%end%>    
 
-                    <a type="button" class="btn" data-toggle="dropdown" aria-expanded="false" id="modal-cadre">
+              </div>
+                    <a type="button" class="btn vanish-discover" data-toggle="dropdown" aria-expanded="false" id="modal-cadre" onclick="vanish()">
                       Discover
                     </a>
-                    
-                    <ul class="dropdown-menu" role="menu">
+                    <ul class="dropdown-menu dropdown" role="menu">
                           
                           <li id="modal-cadre">
+                            <button onclick="back()">back</button>
                             <a href="#">
                                 <%= form_tag search_projects_path, method: :get, class: "row center pad-bot", role: "search" do %>
                                 <%= text_field_tag :search, params[:search], class: "block form-control" %>
@@ -117,6 +118,32 @@
   <a href="" class="btn">Twitter</a>
 </footer>
 
+<script>
+function vanish() {
+  var modal_vanish = document.querySelector("#vanish-div");
+  modal_vanish.style.display = "none" ;
+  var discover_vanish = document.querySelector(".vanish-discover");
+  discover_vanish.style.display = "none" ;
+};
 
+function back() {
+  var modal_vanish = document.querySelector("#vanish-div");
+  modal_vanish.style.display = "" ;
+  var discover_vanish = document.querySelector(".vanish-discover");
+  discover_vanish.style.display = "" ;
+  
+  var fourDisplay = document.querySelector(".dropdown-menu");
+  if (modal_vanish.style.display = "none") {
+    fourDisplay.style.display = "";
+    modal_vanish.style.display = "" ;
+  } else {
+    fourDisplay.style.display = "none";
+  };
+  
+  // location.reload(); 
+  // $('#modal').modal('toggle');
+};
+
+</script>
 </body>
 </html>
