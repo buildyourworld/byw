@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require social_share
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -130,7 +131,7 @@ div.modal-backdrop.fade.in {
 	margin-top : 50px;
 }
 
-div#modal.modal.fade.in {
+div.modal {
 	margin-top : 50px;
 }
 
@@ -457,16 +458,22 @@ div.container-fluid {
 
 #share {
 	display: block;
-	margin-top: 30px;
+	margin-top: 50px;
 	text-align: center;
 }
 
-#project_name {
+#social_share {
+	margin-top: 30px;
 }
 
-#project_description {
-	height: 100px;
+#col_tool_skill {
+	border-left: 1px solid grey;
+	border-radius: 0px;
 }
+
+#show_tools{
+	margin-top: 30px;
+} 
 
 #new_skill {
 	display: inline-block;

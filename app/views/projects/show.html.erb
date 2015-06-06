@@ -13,10 +13,10 @@
 				<div class="col-sm-4 well" style="text-align:center">
 					<div><p id="pioneer"></p></div>
 						<a href="" class="btn" id="volunteer">Become a volunteer</a>
-					<div id="share">
-						<p>Share the project</p>
-						<a href="" class="btn pad-top">Facebook</a>
-						<a href="" class="btn pad-top">Twitter</a>
+					<div id="share">Share this project to help his pioneer to find volunteers
+						<div id="social_share"> 
+							<%= social_share(@project.name, project_path(@project), services: [:facebook, :twitter, :google_plus, :reddit]) %>
+						</div>
 					</div> 
 				</div>
 			</div>
@@ -36,8 +36,8 @@
 				<div class="col-sm-1">
 				</div>
 
-				<div class="col-sm-3 well pad-top">
-					<div>
+				<div class="col-sm-3 well pad-top" id="col_tool_skill">
+					<div id"show_skills">
 			   	 		<ul>
 			   	 		<p>Skills wanted :</p>
 			   	 		<% @project.skills.each do |s|%>
@@ -46,14 +46,14 @@
 			   	 		</ul>	
 			  		</div>	
 
-			  			<div id="showpanels" class="pad-top">	
-				   	 		<ul>
-				   	 		<p>Tools needed :</p>
-					   	 		<% @project.tools.each do |t|%>
-					   	 			<li><%= t.name%></li>
-					   	 		<%end%>
-				   	 		</ul>
-			  			</div>
+		  			<div id="show_tools" class="pad-top">	
+			   	 		<ul>
+			   	 		<p>Tools needed :</p>
+				   	 		<% @project.tools.each do |t|%>
+				   	 			<li><%= t.name%></li>
+				   	 		<%end%>
+			   	 		</ul>
+		  			</div>
 				</div>
 			</div>
 		</div>

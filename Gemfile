@@ -29,6 +29,7 @@ gem 'cocoon'
 
 gem 'carrierwave'
 gem 'rmagick', '~> 2.14.0'
+gem 'social_share', '~> 0.2.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
