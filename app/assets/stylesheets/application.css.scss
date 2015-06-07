@@ -30,6 +30,27 @@ a {
 	color: black;
 }
 
+div.panel.panel-default {
+	margin-top: 50px;
+	margin-left: 100px;
+}
+
+.panel-default {
+}
+
+.panel {
+	margin-bottom: 20px;
+	background-color: #F2FCF9;
+	border: #ddd;
+	border-radius: 4px;
+	box-shadow: none;
+}
+
+.panel-default > .panel-heading {
+	margin-bottom: 25px;
+	border: 1px solid #F2FCF9;
+}
+
 #back {
 	margin-top:30px;
 	margin-left: 50px;
@@ -97,6 +118,7 @@ div.btn.btn-default:hover {
 
 div#header.row{
 	width: 100%;
+	height: 40px;
 	display: -webkit-inline-box;
 	margin-left: 15px;
 	margin-top: 15px;
@@ -278,7 +300,8 @@ ul {
 }
 
 #short_name {
-	font-weight: bold; 
+	font-weight: bold;
+	margin-top: 10px; 
 }
 
 #short_description {
@@ -339,7 +362,6 @@ h1 {
 	font-family: Open Sans;
 	font-size: 22px;
 	font-weight: normal;
-	margin-left: 150px;
 }
 
 h2 {
@@ -386,7 +408,8 @@ form#new_project.new_project {
     text-align: center;
     background-color: #E4FEFE;
 	width: 100%;
-	height: 150px;
+	height: 150px;	
+	border-top: 1px solid #EAEAEA;
 }
 
 #footer a {
@@ -408,27 +431,24 @@ form#new_project.new_project {
 
 /*show project*/
 
-div.panel.panel-default {
-	margin-top: 50px;
-	margin-left: 100px;
+div#home.row {
+	margin-left: -15px;
 }
 
-.panel-default {
+#show-title {
+	text-align: center;
+	font-size: 2em;
+	margin-top: 20px;
 }
 
-.panel {
-	margin-bottom: 20px;
-	background-color: #F8FFFF;
-	border: #ddd;
-	border-radius: 4px;
-	box-shadow: none;
+#firstrowshow {
+	background-color: #EFFFFB;
+	border-top: 1px solid #EAEAEA;
 }
 
-.panel-default > .panel-heading {
-	margin-bottom: 25px;
-	border-bottom: none;
-	background-color: transparent;
-	border-color: transparent;
+#secondrowshow {
+	background-color: #EAFFFC;
+	border-top: 1px solid #EAEAEA;
 }
 
 #show_project {
@@ -442,7 +462,8 @@ div.panel.panel-default {
 }
 
 #show_project_desc {
-	text-align:justify;
+	text-align: justify;
+	margin-left: 70px;
 }
 
 div.container-fluid {
@@ -467,13 +488,18 @@ div.container-fluid {
 }
 
 #col_tool_skill {
-	border-left: 1px solid grey;
+	border-left: 1px solid #EAEAEA;
 	border-radius: 0px;
+	text-align: center;
 }
 
 #show_tools{
 	margin-top: 30px;
 } 
+
+#show_skills ul li {
+	margin-top: 30px;
+}
 
 #new_skill {
 	display: inline-block;
