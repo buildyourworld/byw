@@ -2,6 +2,13 @@
 	<div class="row" id= "show-title">
 		<h1><%= @project.name %></h1>
 	</div>
+	<div class="row" id= "show-title">
+		<h1><%= @project.latitude %></h1>
+	</div>
+	<div class="row" id= "show-title">
+		<h1><%= @project.longitude %></h1>
+	</div>
+
 	<div class="row">
 		<div class="col-sm-7 pad-top" style="text-align: center; margin-bottom: 50px;">
 			<%= image_tag @project.image.url(:showth)%>

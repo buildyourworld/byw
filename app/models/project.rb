@@ -1,4 +1,6 @@
 class Project < ActiveRecord::Base
+	geocoded_by :city
+	after_validation :geocode
 	mount_uploader :image, ImageUploader
 	has_many :skills
 	has_many :tools
