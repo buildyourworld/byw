@@ -51,6 +51,10 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
+    @hash = Gmaps4rails.build_markers(@project) do |project, marker|
+      marker.lat project.latitude
+      marker.lng project.longitude
+    end
   end
 
   # GET /projects/new
