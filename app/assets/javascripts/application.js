@@ -17,3 +17,5 @@
 //= require bootstrap-sprockets
 //= require_tree .
 //= require social_share
+//= require underscore
+//= require gmaps/google
