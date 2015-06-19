@@ -23,94 +23,94 @@
 
 <div class="container-fluid">
   
-  <div class="row" id="header">
+  <div class="row navbar navbar-fixed-top" id="header">
     
-      <div>
+      <div id="brandname">
           <%= link_to "AeM", root_path%>
       </div>
       <div id="menu">
           <a type="button" href="#modal" data-toggle="modal" id"header_btn">MENU</a>
       </div>
-
-        <div class="modal fade" id="modal">
-        
-            <div class="modal-header">
-              <a class="close" data-dismiss="modal">&times;</a>  
-            </div>
-        
-            <div class="modal-body">
-              <div id="vanish-div">
-                  <div id="modal-cadre">
-                    <%= link_to 'New Project', new_project_path %>
-                  </div>
-                  
-                  <%if user_signed_in?%>
-                    <div id="modal-cadre">
-                        <%= link_to "Your account", edit_user_registration_path%>
-                    </div>
-                    <div id="modal-cadre">
-                        <%= link_to "Log out", destroy_user_session_path, method: :delete%>
-                    </div>
-                  
-                  <%else%>
-                    <div id="modal-cadre">
-                        <%= link_to "Sign up", new_user_registration_path%>
-                    </div>
-                    <div id="modal-cadre">
-                        <%= link_to "Log in", new_user_session_path%>
-                    </div>
-                  <%end%>    
-
-              </div>
-                    <a type="button" class="btn vanish-discover" data-toggle="dropdown" aria-expanded="false" id="modal-cadre" onclick="vanish()">
-                      Discover
-                    </a>
-                    <ul class="dropdown-menu dropdown" role="menu">
-                          
-                          <li id="modal-cadre">
-                            <button onclick="back()">back</button>
-                            <a href="#">
-                                <%= form_tag search_projects_path, method: :get, class: "row center pad-bot", role: "search" do %>
-                                <%= text_field_tag :search, params[:search], class: "block form-control" %>
-                                 <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                <button id="action_btn">
-                                  search
-                                </button>
-                                <% end %>
-                              </a>
-                          </li>
-                        <li id="modal-cadre">
-                            <%= link_to "architecture", architecture_projects_path%>
-                        </li>
-                        <li id="modal-cadre">
-                            <%= link_to "charity", charity_projects_path%>
-                        </li>
-                        <li id="modal-cadre">
-                            <%= link_to "demonstration", demonstration_projects_path%>
-                        </li>
-                        <li id="modal-cadre">
-                            <%= link_to "environment", environment_projects_path%>
-                        </li>
-                        <li id="modal-cadre">
-                            <%= link_to "musique", musique_projects_path%>
-                        </li>
-                        <li id="modal-cadre">
-                            <%= link_to "technology", technology_projects_path%>
-                        </li>
-                        <li id="modal-cadre">
-                            <%= link_to "sports", sports_projects_path%>
-                        </li>
-                      </ul>
-
-            </div>
-
-            <div class="modal-footer">
-                    <a href="#" class="btn" data-dismiss="modal">Close</a>
-            </div>
-  
-       </div>
-
   </div>
+    <div class="modal fade" id="modal">
+    
+        <div class="modal-header">
+          <a class="close" data-dismiss="modal">&times;</a>  
+        </div>
+    
+        <div class="modal-body">
+          <div id="vanish-div">
+              <div id="modal-cadre">
+                <%= link_to 'New Project', new_project_path %>
+              </div>
+              
+              <%if user_signed_in?%>
+                <div id="modal-cadre">
+                    <%= link_to "Your account", edit_user_registration_path%>
+                </div>
+                <div id="modal-cadre">
+                    <%= link_to "Log out", destroy_user_session_path, method: :delete%>
+                </div>
+              
+              <%else%>
+                <div id="modal-cadre">
+                    <%= link_to "Sign up", new_user_registration_path%>
+                </div>
+                <div id="modal-cadre">
+                    <%= link_to "Log in", new_user_session_path%>
+                </div>
+              <%end%>    
+
+          </div>
+                <a type="button" class="btn vanish-discover" data-toggle="dropdown" aria-expanded="false" id="modal-cadre" onclick="vanish()">
+                  Discover
+                </a>
+                <ul class="dropdown-menu dropdown" role="menu">
+                      
+                      <li id="modal-cadre">
+                        <button onclick="back()">back</button>
+                        <a href="#">
+                            <%= form_tag search_projects_path, method: :get, class: "row center pad-bot", role: "search" do %>
+                            <%= text_field_tag :search, params[:search], class: "block form-control" %>
+                             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            <button id="action_btn">
+                              search
+                            </button>
+                            <% end %>
+                          </a>
+                      </li>
+                    <li id="modal-cadre">
+                        <%= link_to "architecture", architecture_projects_path%>
+                    </li>
+                    <li id="modal-cadre">
+                        <%= link_to "charity", charity_projects_path%>
+                    </li>
+                    <li id="modal-cadre">
+                        <%= link_to "demonstration", demonstration_projects_path%>
+                    </li>
+                    <li id="modal-cadre">
+                        <%= link_to "environment", environment_projects_path%>
+                    </li>
+                    <li id="modal-cadre">
+                        <%= link_to "musique", musique_projects_path%>
+                    </li>
+                    <li id="modal-cadre">
+                        <%= link_to "technology", technology_projects_path%>
+                    </li>
+                    <li id="modal-cadre">
+                        <%= link_to "sports", sports_projects_path%>
+                    </li>
+                  </ul>
+
+        </div>
+
+        <div class="modal-footer">
+                <a href="#" class="btn" data-dismiss="modal">Close</a>
+        </div>
+
+   </div>
+
+  
 
     
   <div class="row" id="home">
@@ -120,7 +120,7 @@
 </div>
 
 <footer class="footer" id="footer">
-  <a href="" class="btn">Staskstact</a>
+  <a href="http://www.staskstact.com" class="btn">Staskstact</a>
   <a href="mailto:jeanhuguesbc@hotmail.com" class="btn">Contact us</a>
   <a href="" class="btn">Facebook</a>
   <a href="" class="btn">Twitter</a>

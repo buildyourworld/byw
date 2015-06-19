@@ -8,6 +8,7 @@ class ProjectsController < ApplicationController
     @hash = Gmaps4rails.build_markers(@projects) do |project, marker|
       marker.lat project.latitude
       marker.lng project.longitude
+      marker.infowindow project.description
     end
   end
   def search

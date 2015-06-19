@@ -1,30 +1,27 @@
-<div class="row navbar navbar-top-fixed" id="headershow">
-	
-	<a href="" class="btn" id="volunteer">Become a volunteer</a>
-	<div id="social_share"> 
-	<%= social_share(@project.name, project_path(@project), services: [:facebook, :twitter, :google_plus, :reddit]) %>
-	</div>
-</div>
-
-<div class="row" id="firstrowshow">
-	<div class="row" id= "show-photo">
-		<div class="col-sm-7 pad-top" style="text-align: center; margin-bottom: 50px;">
+<div class="row pad-top" id="firstrowshow">
+		<div class="col-md-6" id= "show-photo" style="text-align: center; margin-bottom: 50px;">
 				<%= image_tag @project.image.url(:showth)%>
 		</div>
+	<div class="col-md-6">
+		<div class="row">
+		<h1 id= "show-title"><%= @project.name %></h1>
+		<h1 id= "show-city"><%= @project.city %></h1>
+		</div>
+		<div class="row" id="headershow">
+			<a href="" class="btn" id="volunteer">Become a volunteer</a>
+			<div id="social_share"> 
+			<%= social_share(@project.name, project_path(@project), services: [:facebook, :twitter, :google_plus, :reddit]) %>
+			</div>
+		</div>
+	</div>
+</div>
 	<!-- <div class="row" id= "show-title">
 		<h1><%= @project.city %></h1>
 	</div> -->
 	
 </div>
 
-<div class="row">
-	<div class="col-md-9">
-		<h1 id= "show-title"><%= @project.name %></h1>
-		<h1 id= "show-city"><%= @project.city %></h1>
-	</div>
-</div>
-
-<div class="row">
+<div class="row" id="show-description">
     <div class="col-md-8 col-lg-8">
 	    <div class="text-muted text-center hide-sm">
 			<div id="show_project_desc">
@@ -35,7 +32,7 @@
 			</div>
 		</div>
     </div>
-    <div class="col-md-4 col-lg-4">
+    <div class="col-md-4 col-lg-4" id="show-skillstools">
     	<div id"show_skills">
    	 		<ul>
    	 		<p>Skills wanted :</p>
