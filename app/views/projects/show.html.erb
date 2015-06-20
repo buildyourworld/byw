@@ -1,8 +1,8 @@
-<div class="row pad-top" id="firstrowshow">
-		<div class="col-md-6" id= "show-photo" style="text-align: center; margin-bottom: 50px;">
+<div class="row" id="firstrowshow">
+		<div class="col-md-8" id= "show-photo" style="text-align: center;">
 				<%= image_tag @project.image.url(:showth)%>
 		</div>
-	<div class="col-md-6">
+	<div class="col-md-4">
 		<div class="row">
 		<h1 id= "show-title"><%= @project.name %></h1>
 		<h1 id= "show-city"><%= @project.city %></h1>
@@ -12,7 +12,9 @@
 			<div id="social_share"> 
 			<%= social_share(@project.name, project_path(@project), services: [:facebook, :twitter, :google_plus, :reddit]) %>
 			</div>
-		</div>
+		</div>	
+		<div class="row" id="edit">
+		<%= link_to 'Edit', edit_project_path(@project) %>
 	</div>
 </div>
 	<!-- <div class="row" id= "show-title">
@@ -26,25 +28,22 @@
 	    <div class="text-muted text-center hide-sm">
 			<div id="show_project_desc">
 				<%= @project.description %>
-				<div style="color:red;">
-	    			inside the description allow people to add one photo or video
-				</div>
 			</div>
 		</div>
     </div>
     <div class="col-md-4 col-lg-4" id="show-skillstools">
-    	<div id"show_skills">
+    	<div id"show_skills" class="well">
    	 		<ul>
-   	 		<p>Skills wanted :</p>
+   	 		<p style="text-align: center; font-weight: bold">Skills wanted</p>
    	 		<% @project.skills.each do |s|%>
    	 			<li class="pad-top"><%= s.name%></li>
    	 		<%end%>
    	 		</ul>	
   		</div>	
 
-		<div id="show_tools" class="pad-top">	
+		<div id="show_tools" class="pad-top well">	
 	 		<ul>
-	 		<p>Tools needed :</p>
+	 		<p style="text-align: center; font-weight: bold">Tools needed</p>
    	 		<% @project.tools.each do |t|%>
    	 			<li class="pad-top"><%= t.name%></li>
    	 		<%end%>
@@ -72,7 +71,7 @@
 </div>
 
 <div class="row">
-	<div id="map" style='width: 90%; height: 400px;'></div>
+	<div id="map" style='height: 400px;'></div>
 	</div>
 	<script type="text/javascript">
 		handler = Gmaps.build('Google');
@@ -121,8 +120,8 @@
 	</div>
 </div> -->
 
-<div id="back">
+<!-- <div id="back">
 	<%= link_to 'Edit', edit_project_path(@project) %>
 	<%= link_to 'Back', projects_path %>
-</div>
+</div> -->
 </div>
