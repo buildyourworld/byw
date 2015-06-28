@@ -15,6 +15,10 @@ Rails.application.routes.draw do
       get :technology
       get :emergency
     end
+
+    resources :users
+ 
+    
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
