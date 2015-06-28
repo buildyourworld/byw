@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :users, only: [:show] 
   root 'projects#index'
   
   resources :projects do
@@ -16,7 +17,6 @@ Rails.application.routes.draw do
       get :emergency
     end
 
-    resources :users
  
     
   end
