@@ -2,6 +2,9 @@ class Project < ActiveRecord::Base
 	geocoded_by :city
 	after_validation :geocode
 	mount_uploader :image, ImageUploader
+	serialize :members_id, Array
+	serialize :members_id_pending, Array
+	serialize :owners_id, Array
 	has_many :skills
 	has_many :tools
 	accepts_nested_attributes_for :skills, :reject_if => :all_blank, :allow_destroy => true
