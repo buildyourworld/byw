@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  resources :sharideas
+
   devise_for :users
   resources :users, only: [:show] 
   root 'projects#index'

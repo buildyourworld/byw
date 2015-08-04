@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150704212810) do
+ActiveRecord::Schema.define(version: 20150804141234) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -32,6 +32,13 @@ ActiveRecord::Schema.define(version: 20150704212810) do
     t.text     "members_id",         default: "--- []\n"
     t.text     "members_id_pending", default: "--- []\n"
     t.text     "owners_id",          default: "--- []\n"
+  end
+
+  create_table "sharideas", force: :cascade do |t|
+    t.string   "title"
+    t.string   "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "skills", force: :cascade do |t|
