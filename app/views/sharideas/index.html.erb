@@ -3,14 +3,13 @@
 <div class="row" id="listing">
 
 	<% @sharideas.each do |sharidea| %>
-		<div class="row center"><%= sharidea.title %></div>
-        <div class="row center"><%= link_to sharidea.url %></div>
+		<%= link_to "#{sharidea.title}", "#{sharidea.url}", target: :_blank %>
+		<%= link_to 'Destroy', @sharidea, method: :destroy, data: { confirm: 'Are you sure?' } %>
 	<% end %>
 <div>
 
-<%= link_to 'Destroy', @sharidea, method: :delete, data: { confirm: 'Are you sure?' } %>
-
 <div id="create-sharideas">
+
 
 <%= render 'form' %>
 

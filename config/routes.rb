@@ -20,7 +20,8 @@ Rails.application.routes.draw do
       get :emergency
     end
 
- 
+get '/sharideas/:id/' =>'sharideas#destroy', :as => :destroy_sharidea
+
     
   end
 
